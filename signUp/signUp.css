@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: #fff;
+  --cream: #f8f9fa;
+  --coral: #525960;
+  --desertSun: #848c94;
+}
+@font-face {
+  font-family: title;
+  src: url(../assets/fonts/Lora-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: heading;
+  src: url(../assets/fonts/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: font;
+  src: url();
+}
+a {
+  text-decoration: none !important;
+  color: #333 !important;
+}
+body,
+html {
+  background-color: var(--cream) !important;
+}
+form {
+  display: grid;
+  gap: 10px;
+  cursor: pointer;
+}
+form h1 {
+  color: var(--desertSun) !important;
+  font-family: title;
+}
+form label {
+  font-family: heading !important;
+  color: var(--desertSun);
+}
+form input:focus {
+  border: 2px solid var(--coral) !important;
+  outline: none !important;
+  box-shadow: 0 0 5px var(--coral) !important;
+}
+form button {
+  background: var(--desertSun) !important;
+  outline: none !important;
+  border: none !important;
+  font-family: heading !important;
+  color: var(--white);
+}
+.coral {
+  color: var(--coral) !important;
+  margin: 0px 2px !important;
+  font-family: title;
+}
+.toastify-center {
+  font-family: title;
+  font-size: 15px;
+  color: var(--white) !important;
+  background-color: var(--desertSun) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 3px #0000007d;
+  box-shadow: 0px 0px 5px #00000080;
+}
+.toastify-center img {
+  filter: drop-shadow(0px 0px 5px #00000080);
+}
+.whiteShadow {
+  filter: drop-shadow(0px 0px 1px #ffffff) !important;
+}
+.blackShadow {
+  filter: drop-shadow(0px 0px 1px #000000) !important;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+@media (max-width: 590px) {
+  .form-signin {
+    width: 100% !important;
+  }
+  .logoImg {
+    width: 100% !important;
+  }
+}

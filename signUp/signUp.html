@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vibes |SignUp</title>
+    <link rel="shortcut icon" href="../assets/webIcon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@iconify/iconify@latest/dist/iconify.min.js"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="signUp.css">
+</head>
+  <body>
+    <div class="container py-5">
+        <main class="form-signin w-25 mx-auto ">
+            <!-- SignUp Form -->
+            <form id="signUpForm">
+              <img class="mb-4 logoImg" src="../assets/logo.png" onclick="window.location.replace('../index.html')" width="300" height="80">
+              <h1 class="h3 mb-3 fw-normal text-center display-5 fw-bold">Sign Up</h1>
+          
+              <div class="form-floating" >
+                <input type="text" class="form-control" id="signUp-Name" placeholder="name@example.com">
+                <label for="signUp-Name">Full Name</label>
+              </div>
+              <div class="form-floating">
+                <input type="email" class="form-control" id="signUp-Email" placeholder="name@example.com">
+                <label for="signUp-Email">Email address</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" class="form-control" id="signUp-Password" placeholder="Password">
+                <label for="signUp-Password">Password</label>
+              </div>
+              <div class="form-floating">
+                <p>Already have an account ?<a id="loginBtn" class="coral">Login</a></p>
+              </div>
+              
+              <button class="btn btn-primary w-100 py-2" type="submit">Sign up</button>
+              <div class="d-flex justify-content-between gap-3 align-items-center">
+                <button class="btn btn-primary btn-md w-50 py-2" id="SignUpGoogle" type="button"><img src="../assets/loginWithGoogle.png" width="30" height="30" class="blackShadow"></button>
+                <button class="btn btn-primary btn-md w-50 py-2" id="SignUpFacebook" type="button"><img src="../assets/loginWithFacebook.png" width="30" height="30" class="blackShadow"></button>
+                <button class="btn btn-primary btn-md w-50 py-2" id="SignUpGithub" type="button"><img src="../assets/loginWithGithub.png" width="30" height="30" class="whiteShadow"></button>
+              </div>
+              <p class="mt-5 mb-3 text-body-secondary text-center">© copyrights All rights Reserved by <span class="coral">Smart Vibes</span> <span class="year"></span></p>
+            </form>
+
+            <!-- Login Form -->
+
+            <form id="loginInForm" style="display: none;">
+              <img class="mb-4 logoImg" src="../assets/logo.png" onclick="window.location.replace('../index.html')" width="300" height="80">
+              <h1 class="h3 mb-3 fw-normal text-center display-5 fw-bold">Login</h1>
+          
+              <div class="form-floating">
+                <input type="email" class="form-control" id="logIn-Email" placeholder="name@example.com">
+                <label for="logIn-Email">Email address</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" class="form-control" id="logIn-Password" placeholder="Password">
+                <label for="logIn-Password">Password</label>
+              </div>
+              <div class="form-floating d-flex justify-content-between align-items-center">
+                <a id="signInBtn" class="coral">Don't have account ?</a><a id="forgetPasswordBtn" class="coral">Forget password ?</a>
+              </div>
+              
+              <button class="btn btn-primary w-100 py-2" type="submit">Login in</button>
+              <div class="d-flex justify-content-between gap-3 align-items-center">
+                <button class="btn btn-primary btn-md w-50 py-2" id="LoginGoogle" type="button"><img src="../assets/loginWithGoogle.png" width="30" height="30" class="blackShadow"></button>
+                <button class="btn btn-primary btn-md w-50 py-2" id="LoginFacebook" type="button"><img src="../assets/loginWithFacebook.png" width="30" height="30" class="blackShadow"></button>
+                <button class="btn btn-primary btn-md w-50 py-2" id="LoginGithub" type="button"><img src="../assets/loginWithGithub.png" width="30" height="30" class="whiteShadow"></button>
+              </div>
+              <p class="mt-5 mb-3 text-body-secondary text-center">© copyrights All rights Reserved by <span class="coral">Smart Vibes</span> <span class="year"></span></p>
+            </form>
+
+            <!-- Forget Password -->
+
+            <form id="forgetPasswordForm"  style="display: none;">
+              <img class="mb-4 logoImg" src="../assets/logo.png" onclick="window.location.replace('../index.html')" width="300" height="80">
+              <h1 class="h3 mb-3 fw-normal text-center display-5 fw-bold">Forget Password</h1>
+
+              <div class="form-floating">
+                <input type="email" class="form-control" id="forgetPassword-Email" placeholder="name@example.com">
+                <label for="forgetPassword-Email">Email address</label>
+              </div>
+              
+
+              <button class="btn btn-primary w-100 py-2" type="submit" >Reset Password</button>
+              
+              <div class="form-floating d-flex justify-content-between align-items-center">
+                <a id="backtoLogin">Remember your password ? <span class="coral">Login here</span>  </a>
+              </div>
+              <p class="mt-5 mb-3 text-body-secondary text-center">© copyrights All rights Reserved by <span class="coral">Smart Vibes</span> <span class="year"></span></p>
+            </form>
+          </main>
+    </div>
+    
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="signUp.js" type="module"></script>
+    <script type="module" src="../app.js"></script>
+</body>
+</html>

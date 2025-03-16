@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vibes |Home</title>
+    <link rel="shortcut icon" href="./assets/webIcon.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />  
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+      crossorigin="anonymous"
+      async
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+      integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="container">
+      <header class="border-bottom lh-1">
+        <div class="row flex-nowrap justify-content-center align-items-center">
+          <!-- <div class="col-4 pt-1">
+              <a class="link-secondary" href="#">Subscribe</a>
+            </div> -->
+          <div class="col-4 text-center logo w-100">
+            <a href="/"
+              ><img
+                src="./assets/logo.png"
+                width="550"
+                class="logoImg"
+                height="110"
+            /></a>
+          </div>
+        </div>
+      </header>
+      <!-- navbar -->
+      <div class="nav-scroller py-1 mb-3 border-bottom">
+        <nav class="nav nav-underline justify-content-lg-between justify-content-center">
+          <a
+            class="nav-item nav-link"
+            style="color: var(--coral) !important"
+            href="/#mainArticle"  onclick="getBlog(`Technology`)"
+            >Technology</a
+          >
+          <a
+            class="nav-item nav-link"
+            style="color: var(--coral) !important"
+            href="/#mainArticle"  onclick="getBlog(`Art`)"
+            >Art</a
+          >
+          <a
+            class="nav-item nav-link"
+            style="color: var(--coral) !important"
+            href="/#mainArticle"  onclick="getBlog(`Culture`)"
+            >Culture</a
+          >
+          <a
+            class="nav-item nav-link"
+            style="color: var(--coral) !important"
+            href="/#mainArticle"  onclick="getBlog(`Food`)"
+            >Food</a
+          >
+          <a
+            class="nav-item nav-link"
+            style="color: var(--coral) !important"
+            href="/#mainArticle"  onclick="getBlog(`Health`)"
+            >Health</a
+          >
+          <a
+            class="nav-item nav-link"
+            style="color: var(--coral) !important"
+            href="/#mainArticle"  onclick="getBlog(`Fashion`)"
+            >Fashion</a
+          >
+          <a
+            class="nav-item nav-link"
+            style="color: var(--coral) !important"
+            href="/#mainArticle"  onclick="getBlog(`Travel`)"
+            >Travel</a
+          >
+          <a
+            class="nav-item nav-link"
+            style="color: var(--coral) !important"
+            href="/#mainArticle"  onclick="getBlog(`Lifestyle`)"
+            >Lifestyle</a
+          >
+          <div
+            class="col-4 d-flex justify-content-end gap-3 align-items-center signUpDiv"
+          >
+            <a
+              class="btn btn-sm w-25 text-light"
+              style="background-color: var(--desertSun)"
+              href="./Blogs/blog.html"
+              >Blogs</a
+            >
+            <a
+              class="btn btn-sm w-25 text-light"
+              style="background-color: var(--desertSun)"
+              href="./signUp/signUp.html"
+              >Sign up</a
+            >
+            <div data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="rounded-full"><img id="userImage" class="mx-2 rounded-circle border border-2 border-dark-subtle" src="https://archive.org/download/whatsapp-smiling-guy-i-accidentally-made/whatsapp%20generic%20person%20light.jpg" width="35" height="35"></div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- update profile modal  -->
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog profileModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Profile</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <center>
+                <div class="mb-3">
+                  <img id="profileImage" class="mx-auto rounded-circle border border-2 border-dark-subtle" src="https://archive.org/download/whatsapp-smiling-guy-i-accidentally-made/whatsapp%20generic%20person%20light.jpg" width="100" height="100">
+                </div>
+                <div class="mb-3">
+                  <div class="display-6" id="profileName">User Name</div>
+                </div>
+                <div class="mb-3">
+                  <div class="fs-5" id="profileEmail">User Email</div>
+                </div>
+              </center>
+            </form>
+          </div>
+          <center>
+              <div class="modal-footer">
+              <button class="btn btn-sm text-light"
+            style="background-color: var(--desertSun);margin: 0 auto;" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Update Profile</button>
+          </div>
+        </center>
+        </div>
+      </div>
+    </div>
+    <!-- inner Modal -->
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+      <div class="modal-dialog profileModal" >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Update Profile </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="changeProfile">
+                <div class="mb-3">
+                  <img id="changeProfileImage" class="mx-auto rounded-circle border border-2 border-dark-subtle" src="https://archive.org/download/whatsapp-smiling-guy-i-accidentally-made/whatsapp%20generic%20person%20light.jpg" width="100" height="100">
+                  <input type="file" id="takeProfileImage" style="display: none;">
+                  <p>Change picture</p>
+                </div>
+                <div class="mb-3">
+                  <label for="changeProfileName" class="col-form-label">Name:</label>
+                  <input type="text" class="form-control" id="changeProfileName">
+                </div>
+                <div class="mb-3">
+                  <label for="changeProfileEmail" class="col-form-label">Email :</label>
+                  <input type="email" class="form-control" id="changeProfileEmail">
+                </div>
+                <button class="btn btn-sm text-light w-100" type="submit" style="background-color: var(--desertSun);">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Body -->
+    <main class="container">
+      <!-- hero-section -->
+      <div class="mb-4 rounded text-body-emphasis bg-body-secondary header">
+        <video playsinline="" autoplay="" loop="" muted="" class="headerVideo">
+          <source src="https://res.cloudinary.com/dzq61zzxb/video/upload/v1741975769/Untitled_video_-_Made_with_Clipchamp_hrfoef.mp4" type="video/mp4" />
+        </video>
+        <div class="header-content">
+          <h1>Explore & Inspire</h1>
+          <p>Welcome to the world of ideas!</p>
+        </div>
+      </div>
+      <!-- twoCards after hero -->
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong
+                class="d-inline-block mb-2 text-primary-emphasis blogCategory"
+                >Art / Creativity</strong
+              >
+              <h3 class="mb-0 blogHeading">Where Science Meets Creativity</h3>
+              <div class="mb-1 text-body-secondary blogPostTime">
+                Nov 12 2025
+              </div>
+              <p class="card-text mb-3 blogPost">
+                Hybrid art represents a contemporary movement where artists engage deeply with scientific and technological research...
+              </p>
+              <span class="blogAuther">Sophia Martinez</span>
+              <a
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop1"
+                class="icon-link gap-1 icon-link-hover stretched-link fw-bold"style="color: var(--coral) !important;"
+              >
+                Continue reading ...
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                width="250"
+                src="https://tpet.ca/wp-content/uploads/2024/02/multi-grade_creative-art_600.webp"
+                alt=""
+                class="h-100"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong
+                class="d-inline-block mb-2 blogCategory"
+                >Fashion</strong
+              >
+              <h3 class="mb-0 blogHeading">Fashion Design</h3>
+              <div class="mb-1 text-body-secondary blogPostTime">
+                Nov 12 2025
+              </div>
+              <p class="card-text blogPost">
+                Virtual try-ons and AR are enhancing online retail, While AI boosts creativity, concerns about the diminishing role of traditional designers continue to grow...
+              </p>
+              <span class="blogAuther">Olivia Harper</span>
+              <a
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop2"
+                class="icon-link gap-1 icon-link-hover stretched-link fw-bold"style="color: var(--coral) !important;"
+              >
+                Continue reading ...
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                width="250"
+                src="https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg"
+                alt=""
+                class="h-100"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- Modal 1-->
+        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop1Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdrop1Label"><h3 class="mb-0 blogHeading">Art </h3></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container p-0">
+                  <div class="row ">
+                    <div class="col-4 ">
+                      <img src="https://tpet.ca/wp-content/uploads/2024/02/multi-grade_creative-art_600.webp" class="h-100 w-100 img-fluid">
+                    </div>
+                    <div class="col-8 ">
+                      <strong
+                        class="d-inline-block mb-2 blogCategory"
+                        >Art / Creativity</strong
+                      >
+                      <h3 class="mb-0 blogHeading display-6">Where Science Meets Creativity</h3>
+                      <div class="mb-1 text-body-secondary blogPostTime">
+                        Nov 12 2025
+                      </div>
+                      <p class="card-text blogPost">
+                        Virtual try-ons and AR are enhancing online retail, While AI boosts creativity, concerns about the diminishing role of traditional designers continue to grow .Sustainability has become a central theme in the fashion industry, with brands and consumers alike shifting towards more eco-friendly choices. The use of organic materials like hemp and organic cotton is increasing, and many companies are focusing on ethical production with fair wages. Thrift shopping and second-hand clothing are also on the rise, promoting a circular fashion economy. However, one of the main concerns is making sustainable fashion affordable and accessible to all. While luxury brands are leading the way, the challenge lies in ensuring that ethical fashion is not just a privilege for the wealthy.
+                      </p>
+                      <span class="blogAuther">Olivia Harper</span>
+                      <div class="fs-4 refLink my-2">Reference Links:</div>
+                      <div class="d-flex gap-4">
+                        <a
+                          href="https://en.wikipedia.org/wiki/Afrocritik"
+                          class="border p-2 rounded"
+                          target="_blank"
+                          style="
+                            color: var(--coral) !important;
+                            text-decoration: underline !important;
+                          "
+                          ><img src="./assets/ref-icon(1).png" width="20" height="20"
+                        /></a>
+                        <a
+                          href="https://www.vogue.co.uk/arts-and-lifestyle"
+                          class="border p-2 rounded"
+                          target="_blank"
+                          style="
+                            color: var(--coral) !important;
+                            text-decoration: underline !important;
+                          "
+                          ><img src="./assets/ref-icon(2).png" width="20" height="20"
+                        /></a>
+                        <a
+                          href="https://www.artnews.com/art-news/news/"
+                          class="border p-2 rounded"
+                          target="_blank"
+                          style="
+                            color: var(--coral) !important;
+                            text-decoration: underline !important;
+                          "
+                          ><img src="./assets/ref-icon(3).png" width="20" height="20"
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal 2-->
+        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop2Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdrop2Label">Fashion</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container p-0">
+                  <div class="row ">
+                    <div class="col-4 ">
+                      <img src="https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg" class="h-100 w-100 img-fluid">
+                    </div>
+                    <div class="col-8 ">
+                      <strong
+                        class="d-inline-block mb-2 blogCategory"
+                        >Fashion</strong
+                      >
+                      <h3 class="mb-0 blogHeading display-6">Sustainable Fashion: The Future of Style</h3>
+                      <div class="mb-1 text-body-secondary blogPostTime">
+                        Nov 12 2025
+                      </div>
+                      <p class="card-text blogPost">
+                        Artificial Intelligence is playing a growing role in the fashion industry, from generating new designs to enhancing customer shopping experiences. AI-driven design tools allow brands to experiment with creative styles that would be difficult to produce manually. Personalized shopping has also improved, with AI algorithms suggesting outfits based on user preferences. Additionally, virtual try-on features and augmented reality are making online fashion retail more interactive. However, some critics fear that AI could replace traditional fashion designers, raising concerns about the future of creativity in the industry.
+                      </p>
+                      <span class="blogAuther">Jessica Harper</span>
+                      <div class="fs-4 refLink my-2">Reference Links:</div>
+                      <div class="d-flex gap-4">
+                        <a
+                          href="https://www.businessoffashion.com/articles/ai-in-fashion"
+                          class="border p-2 rounded"
+                          target="_blank"
+                          style="
+                            color: var(--coral) !important;
+                            text-decoration: underline !important;
+                          "
+                          ><img src="./assets/ref-icon(1).png" width="20" height="20"
+                        /></a>
+                        <a
+                          href="https://www.nytimes.com/section/fashion"
+                          class="border p-2 rounded"
+                          target="_blank"
+                          style="
+                            color: var(--coral) !important;
+                            text-decoration: underline !important;
+                          "
+                          ><img src="./assets/ref-icon(2).png" width="20" height="20"
+                        /></a>
+                        <a
+                          href="https://www.nytimes.com/2025/03/10/style/coperni-review-fortnite.html"
+                          class="border p-2 rounded"
+                          target="_blank"
+                          style="
+                            color: var(--coral) !important;
+                            text-decoration: underline !important;
+                          "
+                          ><img src="./assets/ref-icon(3).png" width="20" height="20"
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="row g-5">
+        <div class="col-md-8">
+
+          <article class="blog-post" id="mainArticle">
+            <h2 class="display-3 link-body-emphasis mb-1 blogTopHeading" id="blogTopHeading">
+              Afrocritik: Illuminating African Art and Culture
+            </h2>
+            <p class="blog-post-meta">
+              <span class="blogPostTime" id="blogPostTime">Jan 1, 2021</span> by
+              <span class="blogAuther" id="blogAuther">Emmanuel 'Waziri' Okoro</span>
+            </p>
+            <div class="fw-bold mb-1">Blog About : <span class="blogCategory" id="blogCategory">Culture</span></div>
+
+            <img id="blogMainImage" src="https://live.staticflickr.com/3438/4555161233_84c6706093.jpg" class="img-fluid">
+            <br /><br />
+            <p>
+              Whether your journey revolves around technology's advancements,
+              emerging lifestyle trends, or heartfelt stories, this blog is here
+              to be your companion at every turn.
+            </p>
+            <hr />
+            <p>
+              We bring a sea of insights to enhance your passions, broaden your
+              perspective, and delve into every aspect of life. Each story
+              penned and every thought shared is crafted with the intention of
+              touching your heart. So come along, and let's embark on a new
+              flight into the world of dreams together!
+            </p>
+            <h2 class="blogHeading display-6 fw-bold" id="blogHeading">
+              Afrocritik: A Beacon for African Creativity
+            </h2>
+            <p class="blogText" id="blogText">
+              Afrocritik is a digital media platform that shines a spotlight on
+              African art, entertainment, fashion, music, movies, and culture.
+              Established in 2021 by Samson Jikeme and Owanate Max-Harry, it
+              operates from Lagos and Los Angeles. The platform publishes
+              insightful critiques and analyses, including end-of-year lists
+              such as 'Top 50 African Albums' and 'Top 100 African Songs.'
+              Additionally, Afrocritik hosts the Afrocritik Prize for Criticism,
+              recognizing excellence in cultural commentary.
+            </p>
+            <div id="blogShortText"></div>
+            <h3 class="fs-4 feaKeyPoints">Featured Key Points:</h3>
+            <ol id="feaKeyPoints">
+              <li>
+                Focuses on African art, entertainment, fashion, music, movies,
+                and culture
+              </li>
+              <li>
+                Established in 2021 with headquarters in Lagos and Los Angeles
+              </li>
+              <li>Publishes end-of-year lists on music and literature</li>
+              <li>Hosts the Afrocritik Prize for Criticism</li>
+            </ol>
+          </article>
+          <div class="fs-4 refLink">Reference Links:</div>
+          <br />
+          <div class="d-flex gap-4" id="refLinks">
+            <a
+              href="https://www.nytimes.com/2025/03/06/arts/design/doom-anne-imhof-review-armory.html"
+              class="border p-2 rounded"
+              target="_blank"
+              style="
+                color: var(--coral) !important; text-decoration: underline !important;
+              "
+              ><img src="./assets/ref-icon(1).png" width="20" height="20"/></a>
+            <a
+              href="https://www.nytimes.com/2025/03/07/arts/design/anselm-kiefer-van-gogh.html"
+              class="border p-2 rounded"
+              target="_blank"
+              style="
+                color: var(--coral) !important;
+                text-decoration: underline !important;
+              "
+              ><img src="./assets/ref-icon(2).png" width="20" height="20"
+            /></a>
+            <a
+              href="https://www.nytimes.com/2025/02/28/arts/design/laura-owens-matthew-marks-gallery.html"
+              class="border p-2 rounded"
+              target="_blank"
+              style="
+                color: var(--coral) !important;
+                text-decoration: underline !important;
+              "
+              ><img src="./assets/ref-icon(3).png" width="20" height="20"
+            /></a>
+          </div>
+          <br /><br />
+          <h2 class="display-4 blogTopHeading text-center">We Prefer Your Choise</h2>
+          <div class="w-100 my-5 d-flex flex-wrap gap-3 justify-content-center">
+            <button type="button" class="btn rounded-pill text-light" style="background-color: var(--desertSun)" onclick="getBlogCards(`Technology`)">Technology</button>
+            <button type="button" class="btn rounded-pill text-light" style="background-color: var(--desertSun)" onclick="getBlogCards(`Art`)">Art</button>
+            <button type="button" class="btn rounded-pill text-light" style="background-color: var(--desertSun)" onclick="getBlogCards(`Health`)">Health</button>
+            <button type="button" class="btn rounded-pill text-light" style="background-color: var(--desertSun)" onclick="getBlogCards(`Culture`)">Culture</button>
+            <button type="button" class="btn rounded-pill text-light" style="background-color: var(--desertSun)" onclick="getBlogCards(`Fashion`)">Fashion</button>
+            <button type="button" class="btn rounded-pill text-light" style="background-color: var(--desertSun)" onclick="getBlogCards(`Food`)">Food</button>
+            <button type="button" class="btn rounded-pill text-light" style="background-color: var(--desertSun)" onclick="getBlogCards(`Travel`)">Travel</button>
+            <button type="button" class="btn rounded-pill text-light" style="background-color: var(--desertSun)" onclick="getBlogCards(`Lifestyle`)">Lifestyle</button>
+          </div>
+            <!-- isko  aake dekhna hai -->
+           <div
+            class="container d-flex flex-wrap gap-3 justify-content-center"
+            id="homefiltration"
+            >
+              <!-- card-1 -->
+              <div class="card homeCard" style="width: 22rem !important;height: 480px !important;">
+                <img src="https://i.ytimg.com/vi/0hYNBnGoS5s/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AHUBoAC4AOKAgwIABABGGUgUyhJMA8=&rs=AOn4CLASNRhFDtilLzokIrZFEwj0y4IuAw" class="blogCardImg rounded-top" style="height: 50% !important;">
+                <div class="card-body" style="height: 50% !important;">
+                  <div class="fw-bold mb-1">About : <span class="blogCategory">Culture</span></div>
+                  <p class="card-text">Minimalism has become a lifestyle trend, focusing on experiences over possessions. Decluttering reduces stress, boosts productivity, and enhances mental well-being, making it more than just a trend but a sustainable lifestyle choice.</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+              <!-- card-2 -->
+              <div class="card homeCard" style="width: 22rem !important;height: 480px !important;">
+                <img src="https://newsday.co.tt/wp-content/uploads/2022/10/21179967.jpg" class="blogCardImg rounded-top" style="height: 50% !important;">
+                <div class="card-body" style="height: 50% !important;">
+                  <div class="fw-bold mb-1">About : <span class="blogCategory">Culture</span></div>
+                  <p class="card-text">Afrocritik is a media platform dedicated to celebrating African creativity across various domains like art, music, and fashion. Founded in 2021, it operates from Lagos and Los Angeles.roducing critical analyses and end-of-year</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+              <!-- card-3 -->
+              <div class="card homeCard" style="width: 22rem !important;height: 480px !important;">
+                <img src="https://img.freepik.com/free-photo/medium-shot-african-women-posing-together_23-2151463152.jpg" class="blogCardImg rounded-top" style="height: 50% !important;">
+                <div class="card-body" style="height: 50% !important;">
+                  <div class="fw-bold mb-1">About : <span class="blogCategory">Culture</span></div>
+                  <p class="card-text">Cultbytes is an online arts and culture magazine founded in 2014 by Swedish art critic and curator Anna Mikaela Ekstrand. Based in New York City, it publishes a diverse range of content, including criticism, opinion pieces, interviews, and essays.</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+              <!-- card-4 -->
+              <div class="card homeCard" style="width: 22rem !important;height: 480px !important;">
+                <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:gvtlwf342d2a3mt4j34sxmbv/bafkreie7ntjkhv3aejizriauwni63ftaqj6ukdu4omapd47boi4fx4pt7i@jpeg" class="blogCardImg rounded-top" style="height: 50% !important;">
+                <div class="card-body" style="height: 50% !important;">
+                  <div class="fw-bold mb-1">About : <span class="blogCategory">Culture</span></div>
+                  <p class="card-text">Festivals serve as a crucial medium for preserving cultural identity and fostering unity within communities Lorem ipsum dolor sit amet.. From vibrant Holi celebrations in India to Japan’s meticulous cherry blossom festivals..</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div> 
+            
+             <!-- detail blog  view Modal -->
+              <div class="modal fade" id="detailBlogModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"       aria-labelledby="staticBackdrop1Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5 mb-0 blogHeading" id="detalBlogCategory">Art</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container p-0">
+                        <div class="row">
+                          <div class="col-lg-12 col-xl-4">
+                            <img id="detalBlogImage" src="https://tpet.ca/wp-content/uploads/2024/02/multi-grade_creative-art_600.webp" class="h-100 w-100 img-fluid">
+                          </div>
+                          <div class="col-lg-12 col-xl-8">
+                            <strong
+                              class="d-inline-block mb-2 blogCategory" id="detalBlogHeading"
+                              >Art / Creativity</strong
+                            >
+                            <h3 class="mb-0 blogHeading display-6" id="detalBlogTopHEading">Where Science Meets Creativity</h3>
+                            <div class="mb-1 text-body-secondary blogPostTime" id="detalBlogTime">
+                              Nov 12 2025
+                            </div>
+                            <p class="card-text blogPost" id="detalBlogText">
+                              Virtual try-ons and AR are enhancing online retail, While AI boosts creativity, concerns about the diminishing role of traditional designers continue to grow .Sustainability has become a central theme in the fashion industry, with brands and consumers alike shifting towards more eco-friendly choices. The use of organic materials like hemp and organic cotton is increasing, and many companies are focusing on ethical production with fair wages. Thrift shopping and second-hand clothing are also on the rise, promoting a circular fashion economy. However, one of the main concerns is making sustainable fashion affordable and accessible to all. While luxury brands are leading the way, the challenge lies in ensuring that ethical fashion is not just a privilege for the wealthy.
+                            </p>
+                            <span class="blogAuther" id="detalBlogAuthor">Olivia Harper</span>
+                            <div class="fs-4 refLink my-2">Reference Links:</div>
+                            <div class="d-flex gap-4" id="detalBlogrefLinks">
+                              <a
+                                href="https://en.wikipedia.org/wiki/Afrocritik"
+                                class="border p-2 rounded"
+                                target="_blank"
+                                style="
+                                  color: var(--coral) !important;
+                                  text-decoration: underline !important;
+                                "
+                                ><img src="./assets/ref-icon(1).png" width="20" height="20"
+                              /></a>
+                              <a
+                                href="https://www.vogue.co.uk/arts-and-lifestyle"
+                                class="border p-2 rounded"
+                                target="_blank"
+                                style="
+                                  color: var(--coral) !important;
+                                  text-decoration: underline !important;
+                                "
+                                ><img src="./assets/ref-icon(2).png" width="20" height="20"
+                              /></a>
+                              <a
+                                href="https://www.artnews.com/art-news/news/"
+                                class="border p-2 rounded"
+                                target="_blank"
+                                style="
+                                  color: var(--coral) !important;
+                                  text-decoration: underline !important;
+                                "
+                                ><img src="./assets/ref-icon(3).png" width="20" height="20"
+                              /></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <!-- get Blog -->
+              <br><br>
+            <center>
+              <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#addBlog" data-bs-whatever="@getbootstrap">Add Blog Here!</button>
+            </center>
+            
+            <div class="modal fade" id="addBlog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Write Blog</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body row ">
+                      <div class="col-lg-12 col-xl-4 d-flex justify-content-center align-items-center">
+                        <img id="userBlogImage" src="./assets/userBlogImage.png" height="100" width="100">
+                        <input type="file" id="getUserBlogImage" style="display: none;">
+                      </div>
+                      <form class="col-lg-12 col-xl-8" id="userBlogForm">
+                        <div class="mb-3 ">
+                          <label for="userBlogTitle" class="col-form-label">Top Heading:</label>
+                          <input type="text" class="form-control" id="userBlogTopHeading">
+                        </div>
+                        <div class="mb-3 ">
+                          <label for="userBlogTitle" class="col-form-label">Title:</label>
+                          <input type="text" class="form-control" id="userBlogTitle">
+                        </div>
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label">Discription:</label>
+                          <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                        <div class="mb-3">
+                          <label for="userBlogdropdown" class="col-form-label">Category:</label>
+                          <div class="dropdown mb-2 ">
+                            <button class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Technology
+                            </button>
+                            <ul class="dropdown-menu ">
+                              <li><a name="Technology" class="dropdown-item">Technology</a></li>
+                              <li><a name="Art" class="dropdown-item">Art</a></li>
+                              <li><a name="Fashion" class="dropdown-item">Fashion</a></li>
+                              <li><a name="Culture" class="dropdown-item">Culture</a></li>
+                              <li><a name="Food" class="dropdown-item">Food</a></li>
+                              <li><a name="Health" class="dropdown-item">Health</a></li>
+                              <li><a name="Travel" class="dropdown-item">Travel</a></li>
+                              <li><a name="Lifestyle" class="dropdown-item">Lifestyle</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="mb-3 d-flex gap-2">
+                          <label for="userBlogTitle" class="col-form-label">FeaturedPoints:</label>
+                          <input type="text" class="form-control" id="userFeauturedPoints">
+                          <button type="button" class="btn btn-outline-secondary addFeature">+</button>
+                        </div>
+                        <!-- yaha add featue aye ga -->
+                         <div id="addFeatures">
+                         </div>
+                        <!--  -->
+                        <div class="mb-3">
+                          <label for="userBlogTitle" class="col-form-label">Reference:</label>
+                          <input type="text" class="form-control" id="userBlogRef">
+                        </div>
+                        <center><button type="submit" class="btn btn-secondary w-50">Done</button></center>
+                      </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- comment section start -->
+          <div
+            class="container-xxl px-lg-5 mt-5 px-3 py-5 comment-section text-dark mx-auto mb-3 pb-5 mt-3 mb-lg-5"
+            style="background-color: var(--cream)"
+          >
+            <div class="p-1 p-lg-2 text-dark">
+              <h2
+                class="text-center mt-1 display-4 fw-bold"
+                style="color: var(--desertSun) !important; font-family: title"
+              >
+                Comments
+              </h2>
+              <p class="text-center" style="font-family: 'heading', serif">
+                We love hearing from you! Your feedback and suggestions help us
+                bring more delicious and exciting content to Smart Vibes. Please
+                share your thoughts, ideas, and love in the comments
+                below. Let's create a community of blog lovers together!
+              </p>
+            </div>
+
+            <!-- here all comments will add dynamically -->
+            <div class="container mt-0 mb-0" id="randomComments"></div>
+
+            <div
+              class="container p-lg-3 mb-5"
+              style="color: var(--desertSun)"
+              id="userComments"
+            >
+              <strong
+                class="text-dark display-6"
+                style="
+                  font-family: title !important;
+                  color: var(--desertSun) !important;
+                "
+                >Comment here...</strong
+              ><br /><br />
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea2"
+                  rows="3"
+                ></textarea>
+              </div>
+              <div class="text-end">
+                <button class="px-3 btn border post-btn2" id="post-btn2">
+                  Post
+                </button>
+              </div>
+            </div>
+          </div>
+          
+
+          <!-- comment section end-->
+           
+        </div>
+
+        <div class="col-md-4" style="background-color: var(--cream)">
+          <div class="position-sticky" style="top: 2rem">
+            <div class="p-4 mb-3 bg-body-tertiary rounded my-3" id="cateQuote">
+              <h4 class="fst-italic text-center">Quote</h4>
+              <div class="my-3 p-3 rounded cateQuote">
+                <p class="mb-0 text-light text-center p-3" >
+                  " <span class="text-light">Culture is the widening of the mind and of the spirit .</span> "<br><br>
+                  <small class="text-light"><span class="fst-italic text-center text-light"> Jawaharlal Nehru</span></small>
+                </p> 
+              </div>
+            </div>
+
+            <div>
+              <h4 class="fst-italic">Recent posts</h4>
+              <ul class="list-unstyled" id="recentPosts">
+                <!-- <li>
+                  <a
+                    class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                    href="#"
+                  >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ98gr1Ms52YGfldytQwfoS9isz5G5MWyR0g&s" width="100%" height="96" alt="">
+                    <div class="col-lg-8">
+                      <h6 class="mb-0">Example blog post title</h6>
+                      <small class="text-body-secondary"
+                        >January 15, 2024</small
+                      >
+                    </div>
+                  </a>
+                </li> -->
+              </ul>
+            </div>
+
+            <div class="p-4">
+              <h4 class="fst-italic">Find me</h4>
+              <ol class="list-unstyled d-flex gap-2">
+                <a
+                  href="https://www.instagram.com/"
+                  class=" "
+                  target="_blank"
+                  style="
+                    color: var(--coral) !important;
+                    text-decoration: underline !important;
+                  "
+                  ><img src="./assets/socialIcon(1).png" width="30" height="30"
+                /></a>
+
+                <a
+                  href="https://www.facebook.com/"
+                  class=""
+                  target="_blank"
+                  style="
+                    color: var(--coral) !important;
+                    text-decoration: underline !important;
+                  "
+                  ><img src="./assets/socialIcon(2).png" width="30" height="30"
+                /></a>
+
+                <a
+                  href="https://github.com/Tuba282"
+                  class=""
+                  target="_blank"
+                  style="
+                    color: var(--coral) !important;
+                    text-decoration: underline !important;
+                  "
+                  ><img src="./assets/socialIcon(3).png" width="30" height="30"
+                /></a>
+
+                <a
+                  href="https://www.linkedin.com/in/tuba-jan-10b0a12b5/"
+                  class=""
+                  target="_blank"
+                  style="
+                    color: var(--coral) !important;
+                    text-decoration: underline !important;
+                  "
+                  ><img src="./assets/socialIcon(4).png" width="30" height="30"
+                /></a>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <br><br>
+    </main>
+    <!-- footer -->
+    <br /><br />
+      <div class="container w-100">
+        <footer class="d-flex flex-wrap  justify-content-center justify-content-lg-between align-items-center border-top">
+          <p class="text-body-secondary text-center text-md-left">© Smart Vibes Company, Made by <span class="fw-bold">Tuba Jan</span> with lots of Love</p>
+      
+          <a href="/" class="d-flex align-items-center justify-content-center link-body-emphasis text-decoration-none">
+            <img src="./assets/logo.png" width="400" 
+            class="logoImg" height="100" alt="">
+          </a>
+        </footer>
+      </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@2.29.3/dist/date-fns.min.js"></script>
+    <script type="module" src="./signUp/signUp.js"></script>
+    <script type="module" src="./app.js"></script>
+    <script type="module" src="./commentsec.js"></script>
+  </body>
+</html>
